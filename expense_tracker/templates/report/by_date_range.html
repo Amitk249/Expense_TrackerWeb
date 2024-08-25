@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expenses by Date Range</title>
+</head>
+<body>
+    <h1>Expenses by Date Range</h1>
+
+    <form method="get">
+        <label for="start_date">Start Date:</label>
+        <input type="date" id="start_date" name="start_date">
+        <label for="end_date">End Date:</label>
+        <input type="date" id="end_date" name="end_date">
+        <button type="submit">Filter</button>
+    </form>
+
+    <h2>Expenses</h2>
+    <ul>
+        {% for expense in expenses %}
+            <li>{{ expense.date }} - {{ expense.category.name }}: {{ expense.amount }} - {{ expense.description }}</li>
+        {% empty %}
+            <li>No expenses available for this date range.</li>
+        {% endfor %}
+    </ul>
+
+    <a href="{% url 'home' %}">Back to Home</a>
+</body>
+</html>

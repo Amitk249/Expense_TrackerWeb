@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summary Report</title>
+</head>
+<body>
+    <h1>Summary Report</h1>
+
+    <h2>Total Expenditure</h2>
+    <p>{{ total_expenditure }}</p>
+
+    <h2>Average Expenditure</h2>
+    <p>{{ average_expenditure }}</p>
+
+    <h2>Expenses by Category</h2>
+    <ul>
+        {% for item in expenses_by_category %}
+            <li>{{ item.category__name }}: {{ item.total_amount }}</li>
+        {% empty %}
+            <li>No expenses available.</li>
+        {% endfor %}
+    </ul>
+
+    <a href="{% url 'home' %}">Back to Home</a>
+</body>
+</html>

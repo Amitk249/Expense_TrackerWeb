@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expenses by Category</title>
+</head>
+<body>
+    <h1>Expenses by Category</h1>
+
+    <h2>Expenses</h2>
+    <ul>
+        {% for item in expenses_by_category %}
+            <li>{{ item.category__name }}: {{ item.total_amount }}</li>
+        {% empty %}
+            <li>No expenses available by category.</li>
+        {% endfor %}
+    </ul>
+
+    <a href="{% url 'home' %}">Back to Home</a>
+</body>
+</html>
