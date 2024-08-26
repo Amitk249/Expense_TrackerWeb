@@ -81,24 +81,6 @@ This project is a full-stack expense tracking application designed to help users
   - User authentication is in place, and forms are validated.
   - User-specific filtering ensures that users can only access their data.
 
-## **Pending Tasks**
-
-- **JWT Token-Based Authentication:**
-  - Implement JWT token authentication for a more scalable and secure system, especially for API endpoints.
-
-- **User-Specific Categories:**
-  - Modify the category management system to allow users to create and manage their categories without affecting others.
-
-- **Frontend Enhancements:**
-  - Improve the responsiveness of the frontend to ensure a better user experience across different devices.
-  - Further enhance the UI/UX to make the application more intuitive and user-friendly.
-
-- **Performance Optimization:**
-  - Optimize the database and application logic to handle a large number of users and expenses efficiently.
-
-- **Enhanced Security:**
-  - Implement additional security measures, including CSRF protection, input sanitization, and data encryption.
-
 ## **Technology Stack**
 
 - **Backend:** Django
