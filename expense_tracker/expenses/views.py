@@ -8,16 +8,19 @@ from django.contrib.auth.decorators import login_required
 from datetime import datetime
 
 def home(request):
-    user_expenses = Expenses.objects.filter(user=request.user)
-    total_expenditure = user_expenses.aggregate(Sum('amount'))['amount__sum'] or 0
-    average_expenditure = user_expenses.aggregate(Avg('amount'))['amount__avg'] or 0
-    expenses_by_category = user_expenses.values('category__name').annotate(total_amount=Sum('amount'))
+    if request.user.is_authenticated:
+        user_expenses = Expenses.objects.filter(user=request.user)
+        total_expenditure = user_expenses.aggregate(Sum('amount'))['amount__sum'] or 0
+        average_expenditure = user_expenses.aggregate(Avg('amount'))['amount__avg'] or 0
+        expenses_by_category = user_expenses.values('category__name').annotate(total_amount=Sum('amount'))
 
-    context = {
-        'total_expenditure': total_expenditure,
-        'average_expenditure': average_expenditure,
-        'expenses_by_category': expenses_by_category
-    }
+        context = {
+            'total_expenditure': total_expenditure,
+            'average_expenditure': average_expenditure,
+            'expenses_by_category': expenses_by_category
+        }
+    else:
+        context = {}
     return render(request, 'home.html',context)
 
 def register(request):
