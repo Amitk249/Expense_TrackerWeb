@@ -3,18 +3,18 @@
 
 ## **Overview**
 
-This project is a full-stack expense tracking application designed to help users manage their finances by recording, categorizing, and generating reports of their expenses. The application provides essential features such as user authentication, expense management, category management, and report generation. The backend is developed using Django, while the frontend integrates with Django templates.
+This project is a full-stack expense tracking application designed to help users manage their finances by recording, categorizing, and generating reports of their expenses. The application provides essential features such as user authentication, expense management, category management, and report generation. The backend is developed using Django, while the front end integrates with Django templates.
 
 ## **Features**
 
 ### **1. User Authentication**
 
 - **Registration:**
-  - Users can create an account by providing a username, email, and password.
+  - Users can create an account by providing a username, and password.
   - Upon successful registration, users are automatically logged in.
   
 - **Login:**
-  - Users can log in using their email and password.
+  - Users can log in using their Username and password.
   
 - **Logout:**
   - Users can log out of their session securely.
@@ -87,7 +87,7 @@ This project is a full-stack expense tracking application designed to help users
   - Implement JWT token authentication for a more scalable and secure system, especially for API endpoints.
 
 - **User-Specific Categories:**
-  - Modify the category management system to allow users to create and manage their own categories without affecting others.
+  - Modify the category management system to allow users to create and manage their categories without affecting others.
 
 - **Frontend Enhancements:**
   - Improve the responsiveness of the frontend to ensure a better user experience across different devices.
