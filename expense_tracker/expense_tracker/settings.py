@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-__q$=)qh-xr*-qj&^*068##71n1p2wl=q8so^k2@f5wc2c1&v8
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["expensetracker-ixd5w8cok-amits-projects-b97cf2e0.vercel.app"]
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
